@@ -1,11 +1,11 @@
 #include "functions.h"
+#include "passwords.h"
 
 #define DEVICE_ID "feather"
 #define MSG_LEN 256
 
-char* ssid = "TeliaGateway30-91-8F-E1-3D-A5";
-const char* pass = "9FB673595C";
-char* connection_string = "HostName=iothub-esp32data.azure-devices.net;DeviceId=iot-esp32;SharedAccessKey=2uocjmN95WovIn62Wom8+GBf8ndlVmqrOWMGgUpnmvA=";
+//ssid, pass och connection_string ligger i gitignorad passwords.h fil
+
 DHT dht(21, DHT11);
 float prev_temp = 0, prev_hum = 0, new_temp, new_hum;
 String formatted_time;
@@ -21,9 +21,10 @@ void setup() {
 }
 
 void loop() {
-    while(!timeClient.update()) {
+  while(!timeClient.update()) {
     timeClient.forceUpdate();
   }
+  
   if(!pending){
     new_temp = dht.readTemperature();
     new_hum = dht.readHumidity();
