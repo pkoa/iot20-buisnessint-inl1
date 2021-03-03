@@ -1,7 +1,6 @@
 #include "AzureIotHub.h"
 #include "Esp32MQTTClient.h"
 #include <ArduinoJson.h>
-
 #include <WiFi.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
