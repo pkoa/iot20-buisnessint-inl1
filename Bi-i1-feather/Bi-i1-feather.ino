@@ -5,6 +5,7 @@
 #define MSG_LEN 256
 
 //ssid, pass och connection_string ligger i gitignorad passwords.h fil
+//gör en egen sådan eller skriv dessa direkt här och kommentera bort include
 
 DHT dht(21, DHT11);
 float prev_temp = 0, prev_hum = 0, new_temp, new_hum;
@@ -13,8 +14,10 @@ String formatted_time;
 void setup() {
   Serial.begin(115200);
   delay(3000);
+  
   initWifi(ssid, pass);
   initMqtt(connection_string);
+  
   dht.begin();
   timeClient.begin();
   timeClient.setTimeOffset(3600);
