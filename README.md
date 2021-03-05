@@ -8,7 +8,7 @@ Sparar och läser från cosmosdb
 Sparar till azure sqldatabas
 
 ## Esp32 baserade MCUer
-Båda skickar deviceid, formatted_time med tidsdata, skolans och mitt namn.
+Båda skickar deviceid, formatted_time med tidsdata. Mitt och skolans namn skickas i json-properties.
 
 ### Bi-i1-feather 
 Arduinosketch, använder Dht11 och skickar temperatur och luftfuktighet
@@ -17,5 +17,5 @@ Arduinosketch, använder Dht11 och skickar temperatur och luftfuktighet
 Arduinosketch, använder inbyggd "hall effect" sensor, skickar sensordata
 
 ## Website
-En hemsida där datat visas från cosmosdb
+En hemsida där datat från cosmosdb visas
 
