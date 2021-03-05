@@ -44,6 +44,8 @@ void loop() {
       serializeJson(doc, payload);
   
       EVENT_INSTANCE* message = Esp32MQTTClient_Event_Generate(payload, MESSAGE);
+      Esp32MQTTClient_Event_AddProp(message, "name", "Erik");
+      Esp32MQTTClient_Event_AddProp(message, "skola", "Nackademin");
       Esp32MQTTClient_SendEventInstance(message);
 
       prev_temp = new_temp;

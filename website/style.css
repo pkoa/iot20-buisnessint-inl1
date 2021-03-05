@@ -1,1 +1,45 @@
 /* style file */
+
+BODY {
+    background-color:#202020;
+     line-height:1px;
+     -webkit-text-size-adjust:none;
+     color: rgb(255, 255, 255);
+     font-family: Open Sans;
+}
+ H1 {
+    font-size: 90%;
+     color: rgb(255, 255, 255);
+}
+ H2 {
+    font-size: 90%;
+     color: #bbb;
+}
+ H3 {
+    color: #bbb;
+}
+ TABLE, TD, TH {
+     font-size: 87%;
+     border: 1px solid #bbb;
+     border-collapse: collapse;
+}
+ TH {
+     font-size: 87%;
+     text-align: left;
+     background-color: #fdfdfd;
+     color: #ffffff;
+     padding: 4px;
+     padding-left: 7px;
+     padding-right: 7px;
+}
+ TD {
+     font-size: 87%;
+     color: #d1d1d1;
+     padding: 4px;
+     padding-left: 7px;
+     padding-right: 7px;
+     max-width: 100px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+}
