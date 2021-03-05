@@ -1,6 +1,6 @@
 # IOT20 Buissness intelligence inlämningsuppgift 1
 
-Arduinosketcherna använder sig av: https://github.com/taranais/NTPClient/archive/master.zip , för att få fotmatted_time. Finns inte i librarymanager på Arduino IDEn.
+Arduinosketcherna använder sig av: https://github.com/taranais/NTPClient/archive/master.zip , för att få fotmatted_time. Finns **INTE** i librarymanager på Arduino IDEn.
 
 ## Azurefunctions
 ### Azurefunction
