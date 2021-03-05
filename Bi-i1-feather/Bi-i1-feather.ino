@@ -51,9 +51,9 @@ void loop() {
       prev_temp = new_temp;
       prev_hum = new_hum;
       
-      delay(5000);
+      delay(10000);
     } else {
-      delay(5000);
+      delay(2000);
     }
     
   }  

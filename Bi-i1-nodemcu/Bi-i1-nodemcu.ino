@@ -10,7 +10,7 @@
 //ssid, pass och connection_string ligger i gitignorad passwords.h fil
 //gör en egen sådan eller skriv dessa direkt här och kommentera bort include
 
-int prev_sensor_value = -1, prev_sensor_value_mapped = -1, sensor_value = 0, sensor_value_mapped = 0;
+int prev_sensor_value = -1, sensor_value = 0;
 String formatted_time;
 
 void setup() {
@@ -31,9 +31,8 @@ void loop() {
 
   if(!pending){
     sensor_value = hallRead();
-    sensor_value_mapped = map(sensor_value, -200, 200, 1, 3);
     formatted_time = timeClient.getFormattedDate();
-    if(sensor_value != prev_sensor_value and sensor_value_mapped != prev_sensor_value_mapped){
+    if(sensor_value >= prev_sensor_value + 5 or sensor_value + 5 <= prev_sensor_value){
       pending = true;
       char payload[MSG_LEN];
 
@@ -49,11 +48,10 @@ void loop() {
       Esp32MQTTClient_SendEventInstance(message);
 
       prev_sensor_value = sensor_value;
-      prev_sensor_value_mapped = sensor_value_mapped;
       
-      delay(5000);
+      delay(10000);
     } else {
-      delay(5000);
+      delay(2000);
     }
   }
   
