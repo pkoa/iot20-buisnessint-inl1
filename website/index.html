@@ -14,21 +14,33 @@
 </head>
 <body>
     <div class="container mt-5">
-    <table class="table">
+    <table class="table table-primary">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Device ID</th>
         <th scope="col">Temperature</th>
         <th scope="col">Humidity</th>
-        <th scope="col">hall sensor</th>>
         <th scope="col">Timestamp</th>
       </tr>
     </thead>
-    <tbody id="tabledata">
+    <tbody id="tabledata-feather">
+
+    </tbody>
+    <thread>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Device ID</th>
+        <th scope="col">hall effect</th>
+        <th scope="col">Timestamp</th>
+        
+    </tr>
+    </thread>
+    <tbody id = "tabledata-nodemcu">
 
     </tbody>
   </table>
+  <p id ="tabledata-unidentified"></p>
 </div>
     <script src="script.js"></script>
 </body>
